@@ -683,6 +683,186 @@ impl Chain {
         Self::from_named(NamedChain::LensTestnet)
     }
 
+    /// Returns the Kadena mainnet chain 20.
+    #[inline]
+    pub const fn kadena_mainnet20() -> Self {
+        Self::from_named(NamedChain::Kadena20)
+    }
+
+    /// Returns the Kadena mainnet chain 21.
+    #[inline]
+    pub const fn kadena_mainnet21() -> Self {
+        Self::from_named(NamedChain::Kadena21)
+    }
+
+    /// Returns the Kadena mainnet chain 22.
+    #[inline]
+    pub const fn kadena_mainnet22() -> Self {
+        Self::from_named(NamedChain::Kadena22)
+    }
+
+    /// Returns the Kadena mainnet chain 23.
+    #[inline]
+    pub const fn kadena_mainnet23() -> Self {
+        Self::from_named(NamedChain::Kadena23)
+    }
+
+    /// Returns the Kadena mainnet chain 24.
+    #[inline]
+    pub const fn kadena_mainnet24() -> Self {
+        Self::from_named(NamedChain::Kadena24)
+    }
+
+    /// Returns the Kadena testnet chain 20.
+    #[inline]
+    pub const fn kadena_testnet20() -> Self {
+        Self::from_named(NamedChain::KadenaTestnet20)
+    }
+
+    /// Returns the Kadena testnet chain 21.
+    #[inline]
+    pub const fn kadena_testnet21() -> Self {
+        Self::from_named(NamedChain::KadenaTestnet21)
+    }
+
+    /// Returns the Kadena testnet chain 22.
+    #[inline]
+    pub const fn kadena_testnet22() -> Self {
+        Self::from_named(NamedChain::KadenaTestnet22)
+    }
+
+    /// Returns the Kadena testnet chain 23.
+    #[inline]
+    pub const fn kadena_testnet23() -> Self {
+        Self::from_named(NamedChain::KadenaTestnet23)
+    }
+
+    /// Returns the Kadena testnet chain 24.
+    #[inline]
+    pub const fn kadena_testnet24() -> Self {
+        Self::from_named(NamedChain::KadenaTestnet24)
+    }
+
+    /// Returns the KadenaEVM testnet chain 20.
+    #[inline]
+    pub const fn kadena_evm_testnet20() -> Self {
+        Self::from_named(NamedChain::KadenaEvmTestnet20)
+    }
+
+    /// Returns the KadenaEVM testnet chain 21.
+    #[inline]
+    pub const fn kadena_evm_testnet21() -> Self {
+        Self::from_named(NamedChain::KadenaEvmTestnet21)
+    }
+
+    /// Returns the KadenaEVM testnet chain 22.
+    #[inline]
+    pub const fn kadena_evm_testnet22() -> Self {
+        Self::from_named(NamedChain::KadenaEvmTestnet22)
+    }
+
+    /// Returns the KadenaEVM testnet chain 23.
+    #[inline]
+    pub const fn kadena_evm_testnet23() -> Self {
+        Self::from_named(NamedChain::KadenaEvmTestnet23)
+    }
+
+    /// Returns the KadenaEVM testnet chain 24.
+    #[inline]
+    pub const fn kadena_evm_testnet24() -> Self {
+        Self::from_named(NamedChain::KadenaEvmTestnet24)
+    }
+
+    /// Returns the KadenaEVM testnet chain 25.
+    #[inline]
+    pub const fn kadena_evm_testnet25() -> Self {
+        Self::from_named(NamedChain::KadenaEvmTestnet25)
+    }
+
+    /// Returns the KadenaEVM testnet chain 26.
+    #[inline]
+    pub const fn kadena_evm_testnet26() -> Self {
+        Self::from_named(NamedChain::KadenaEvmTestnet26)
+    }
+
+    /// Returns the KadenaEVM testnet chain 27.
+    #[inline]
+    pub const fn kadena_evm_testnet27() -> Self {
+        Self::from_named(NamedChain::KadenaEvmTestnet27)
+    }
+
+    /// Returns the KadenaEVM testnet chain 28.
+    #[inline]
+    pub const fn kadena_evm_testnet28() -> Self {
+        Self::from_named(NamedChain::KadenaEvmTestnet28)
+    }
+
+    /// Returns the KadenaEVM testnet chain 29.
+    #[inline]
+    pub const fn kadena_evm_testnet29() -> Self {
+        Self::from_named(NamedChain::KadenaEvmTestnet29)
+    }
+
+    /// Returns the KadenaEVM testnet chain 30.
+    #[inline]
+    pub const fn kadena_evm_testnet30() -> Self {
+        Self::from_named(NamedChain::KadenaEvmTestnet30)
+    }
+
+    /// Returns the KadenaEVM testnet chain 31.
+    #[inline]
+    pub const fn kadena_evm_testnet31() -> Self {
+        Self::from_named(NamedChain::KadenaEvmTestnet31)
+    }
+
+    /// Returns the KadenaEVM testnet chain 32.
+    #[inline]
+    pub const fn kadena_evm_testnet32() -> Self {
+        Self::from_named(NamedChain::KadenaEvmTestnet32)
+    }
+
+    /// Returns the KadenaEVM testnet chain 33.
+    #[inline]
+    pub const fn kadena_evm_testnet33() -> Self {
+        Self::from_named(NamedChain::KadenaEvmTestnet33)
+    }
+
+    /// Returns the KadenaEVM testnet chain 34.
+    #[inline]
+    pub const fn kadena_evm_testnet34() -> Self {
+        Self::from_named(NamedChain::KadenaEvmTestnet34)
+    }
+
+    /// Returns the KadenaEVM testnet chain 35.
+    #[inline]
+    pub const fn kadena_evm_testnet35() -> Self {
+        Self::from_named(NamedChain::KadenaEvmTestnet35)
+    }
+
+    /// Returns the KadenaEVM testnet chain 36.
+    #[inline]
+    pub const fn kadena_evm_testnet36() -> Self {
+        Self::from_named(NamedChain::KadenaEvmTestnet36)
+    }
+
+    /// Returns the KadenaEVM testnet chain 37.
+    #[inline]
+    pub const fn kadena_evm_testnet37() -> Self {
+        Self::from_named(NamedChain::KadenaEvmTestnet37)
+    }
+
+    /// Returns the KadenaEVM testnet chain 38.
+    #[inline]
+    pub const fn kadena_evm_testnet38() -> Self {
+        Self::from_named(NamedChain::KadenaEvmTestnet38)
+    }
+
+    /// Returns the KadenaEVM testnet chain 39.
+    #[inline]
+    pub const fn kadena_evm_testnet39() -> Self {
+        Self::from_named(NamedChain::KadenaEvmTestnet39)
+    }
+
     /// Returns the kind of this chain.
     #[inline]
     pub const fn kind(&self) -> &ChainKind {
@@ -717,6 +897,12 @@ impl Chain {
     #[inline]
     pub const fn is_elastic(self) -> bool {
         matches!(self.named(), Some(named) if named.is_elastic())
+    }
+
+    /// Returns true if the chain contains Chainweb configuration.
+    #[inline]
+    pub const fn is_chainweb(self) -> bool {
+        matches!(self.named(), Some(named) if named.is_chainweb())
     }
 
     /// Attempts to convert the chain into a named chain.
