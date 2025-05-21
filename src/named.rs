@@ -512,6 +512,77 @@ pub enum NamedChain {
     #[strum(to_string = "lens-testnet")]
     #[cfg_attr(feature = "serde", serde(alias = "lens-testnet"))]
     LensTestnet = 37111,
+
+    #[strum(to_string = "kadena20")]
+    #[cfg_attr(feature = "serde", serde(alias = "kadena-20"))]
+    Kadena20 = 3789,
+    #[strum(to_string = "kadena21")]
+    #[cfg_attr(feature = "serde", serde(alias = "kadena-21"))]
+    Kadena21 = 3790,
+    #[strum(to_string = "kadena22")]
+    #[cfg_attr(feature = "serde", serde(alias = "kadena-22"))]
+    Kadena22 = 3791,
+    #[strum(to_string = "kadena23")]
+    #[cfg_attr(feature = "serde", serde(alias = "kadena-23"))]
+    Kadena23 = 3792,
+    #[strum(to_string = "kadena24")]
+    #[cfg_attr(feature = "serde", serde(alias = "kadena-24"))]
+    Kadena24 = 3793,
+    #[strum(to_string = "kadena-testnet20")]
+    #[cfg_attr(feature = "serde", serde(alias = "kadena-testnet-20"))]
+    KadenaTestnet20 = 2789,
+    #[strum(to_string = "kadena-testnet21")]
+    #[cfg_attr(feature = "serde", serde(alias = "kadena-testnet-21"))]
+    KadenaTestnet21 = 2790,
+    #[strum(to_string = "kadena-testnet22")]
+    #[cfg_attr(feature = "serde", serde(alias = "kadena-testnet-22"))]
+    KadenaTestnet22 = 2791,
+    #[strum(to_string = "kadena-testnet23")]
+    #[cfg_attr(feature = "serde", serde(alias = "kadena-testnet-23"))]
+    KadenaTestnet23 = 2792,
+    #[strum(to_string = "kadena-testnet24")]
+    #[cfg_attr(feature = "serde", serde(alias = "kadena-testnet-24"))]
+    KadenaTestnet24 = 2793,
+    #[cfg_attr(feature = "serde", serde(alias = "kadena-evm-testnet-20"))]
+    KadenaEvmTestnet20 = 1789,
+    #[cfg_attr(feature = "serde", serde(alias = "kadena-evm-testnet-21"))]
+    KadenaEvmTestnet21 = 1790,
+    #[cfg_attr(feature = "serde", serde(alias = "kadena-evm-testnet-22"))]
+    KadenaEvmTestnet22 = 1791,
+    #[cfg_attr(feature = "serde", serde(alias = "kadena-evm-testnet-23"))]
+    KadenaEvmTestnet23 = 1792,
+    #[cfg_attr(feature = "serde", serde(alias = "kadena-evm-testnet-24"))]
+    KadenaEvmTestnet24 = 1793,
+    #[cfg_attr(feature = "serde", serde(alias = "kadena-evm-testnet-25"))]
+    KadenaEvmTestnet25 = 1794,
+    #[cfg_attr(feature = "serde", serde(alias = "kadena-evm-testnet-26"))]
+    KadenaEvmTestnet26 = 1795,
+    #[cfg_attr(feature = "serde", serde(alias = "kadena-evm-testnet-27"))]
+    KadenaEvmTestnet27 = 1796,
+    #[cfg_attr(feature = "serde", serde(alias = "kadena-evm-testnet-28"))]
+    KadenaEvmTestnet28 = 1797,
+    #[cfg_attr(feature = "serde", serde(alias = "kadena-evm-testnet-29"))]
+    KadenaEvmTestnet29 = 1798,
+    #[cfg_attr(feature = "serde", serde(alias = "kadena-evm-testnet-30"))]
+    KadenaEvmTestnet30 = 1799,
+    #[cfg_attr(feature = "serde", serde(alias = "kadena-evm-testnet-31"))]
+    KadenaEvmTestnet31 = 1800,
+    #[cfg_attr(feature = "serde", serde(alias = "kadena-evm-testnet-32"))]
+    KadenaEvmTestnet32 = 1801,
+    #[cfg_attr(feature = "serde", serde(alias = "kadena-evm-testnet-33"))]
+    KadenaEvmTestnet33 = 1802,
+    #[cfg_attr(feature = "serde", serde(alias = "kadena-evm-testnet-34"))]
+    KadenaEvmTestnet34 = 1803,
+    #[cfg_attr(feature = "serde", serde(alias = "kadena-evm-testnet-35"))]
+    KadenaEvmTestnet35 = 1804,
+    #[cfg_attr(feature = "serde", serde(alias = "kadena-evm-testnet-36"))]
+    KadenaEvmTestnet36 = 1805,
+    #[cfg_attr(feature = "serde", serde(alias = "kadena-evm-testnet-37"))]
+    KadenaEvmTestnet37 = 1806,
+    #[cfg_attr(feature = "serde", serde(alias = "kadena-evm-testnet-38"))]
+    KadenaEvmTestnet38 = 1807,
+    #[cfg_attr(feature = "serde", serde(alias = "kadena-evm-testnet-39"))]
+    KadenaEvmTestnet39 = 1808,
 }
 
 // This must be implemented manually so we avoid a conflict with `TryFromPrimitive` where it treats
@@ -692,6 +763,45 @@ impl NamedChain {
         )
     }
 
+    /// Returns true if the chain contains Chainweb configuration.
+    pub const fn is_chainweb(self) -> bool {
+        use NamedChain::*;
+
+        matches!(
+            self,
+            Kadena20
+                | Kadena21
+                | Kadena22
+                | Kadena23
+                | Kadena24
+                | KadenaTestnet20
+                | KadenaTestnet21
+                | KadenaTestnet22
+                | KadenaTestnet23
+                | KadenaTestnet24
+                | KadenaEvmTestnet20
+                | KadenaEvmTestnet21
+                | KadenaEvmTestnet22
+                | KadenaEvmTestnet23
+                | KadenaEvmTestnet24
+                | KadenaEvmTestnet25
+                | KadenaEvmTestnet26
+                | KadenaEvmTestnet27
+                | KadenaEvmTestnet28
+                | KadenaEvmTestnet29
+                | KadenaEvmTestnet30
+                | KadenaEvmTestnet31
+                | KadenaEvmTestnet32
+                | KadenaEvmTestnet33
+                | KadenaEvmTestnet34
+                | KadenaEvmTestnet35
+                | KadenaEvmTestnet36
+                | KadenaEvmTestnet37
+                | KadenaEvmTestnet38
+                | KadenaEvmTestnet39
+        )
+    }
+
     /// Returns the chain's average blocktime, if applicable.
     ///
     /// It can be beneficial to know the average blocktime to adjust the polling of an HTTP provider
@@ -831,6 +941,19 @@ impl NamedChain {
             | RskTestnet | EmeraldTestnet | Boba | PolygonZkEvm | PolygonZkEvmTestnet | Metis
             | Linea | LineaGoerli | LineaSepolia | KakarotSepolia | SonicBlaze | SonicTestnet
             | Treasure | TreasureTopaz | Corn | CornTestnet => return None,
+
+            Kadena20 | Kadena21 | Kadena22 | Kadena23 | Kadena24 => 30_000,
+
+            KadenaTestnet20 | KadenaTestnet21 | KadenaTestnet22 | KadenaTestnet23
+            | KadenaTestnet24 => 30_000,
+
+            KadenaEvmTestnet20 | KadenaEvmTestnet21 | KadenaEvmTestnet22 | KadenaEvmTestnet23
+            | KadenaEvmTestnet24 | KadenaEvmTestnet25 | KadenaEvmTestnet26 | KadenaEvmTestnet27
+            | KadenaEvmTestnet28 | KadenaEvmTestnet29 | KadenaEvmTestnet30 | KadenaEvmTestnet31
+            | KadenaEvmTestnet32 | KadenaEvmTestnet33 | KadenaEvmTestnet34 | KadenaEvmTestnet35
+            | KadenaEvmTestnet36 | KadenaEvmTestnet37 | KadenaEvmTestnet38 | KadenaEvmTestnet39 => {
+                30_000
+            }
         }))
     }
 
@@ -985,6 +1108,17 @@ impl NamedChain {
             | Corn
             | CornTestnet => false,
 
+            // Chainweb chains are EIP-1559 compliant.
+            Kadena20 | Kadena21 | Kadena22 | Kadena23 | Kadena24 | KadenaTestnet20
+            | KadenaTestnet21 | KadenaTestnet22 | KadenaTestnet23 | KadenaTestnet24
+            | KadenaEvmTestnet20 | KadenaEvmTestnet21 | KadenaEvmTestnet22 | KadenaEvmTestnet23
+            | KadenaEvmTestnet24 | KadenaEvmTestnet25 | KadenaEvmTestnet26 | KadenaEvmTestnet27
+            | KadenaEvmTestnet28 | KadenaEvmTestnet29 | KadenaEvmTestnet30 | KadenaEvmTestnet31
+            | KadenaEvmTestnet32 | KadenaEvmTestnet33 | KadenaEvmTestnet34 | KadenaEvmTestnet35
+            | KadenaEvmTestnet36 | KadenaEvmTestnet37 | KadenaEvmTestnet38 | KadenaEvmTestnet39 => {
+                false
+            }
+
             // Unknown / not applicable, default to false for backwards compatibility.
             Dev | AnvilHardhat | Morden | Ropsten | Rinkeby | Cronos | CronosTestnet | Kovan
             | Sokol | Poa | Moonbeam | MoonbeamDev | Moonriver | Moonbase | Evmos
@@ -1086,6 +1220,36 @@ impl NamedChain {
                 | MonadTestnet
                 | Corn
                 | CornTestnet
+                | Kadena20
+                | Kadena21
+                | Kadena22
+                | Kadena23
+                | Kadena24
+                | KadenaTestnet20
+                | KadenaTestnet21
+                | KadenaTestnet22
+                | KadenaTestnet23
+                | KadenaTestnet24
+                | KadenaEvmTestnet20
+                | KadenaEvmTestnet21
+                | KadenaEvmTestnet22
+                | KadenaEvmTestnet23
+                | KadenaEvmTestnet24
+                | KadenaEvmTestnet25
+                | KadenaEvmTestnet26
+                | KadenaEvmTestnet27
+                | KadenaEvmTestnet28
+                | KadenaEvmTestnet29
+                | KadenaEvmTestnet30
+                | KadenaEvmTestnet31
+                | KadenaEvmTestnet32
+                | KadenaEvmTestnet33
+                | KadenaEvmTestnet34
+                | KadenaEvmTestnet35
+                | KadenaEvmTestnet36
+                | KadenaEvmTestnet37
+                | KadenaEvmTestnet38
+                | KadenaEvmTestnet39
         )
     }
 
@@ -1193,6 +1357,18 @@ impl NamedChain {
             | Iotex | Core | Merlin | Bitlayer | ApeChain | Vana | Zeta | Kaia | Treasure | Bob
             | Soneium | Sonic | Superposition | Berachain | Unichain | TelosEvm | Story | Sei
             | Hyperliquid | Abstract | Sophon | Lens | Corn => false,
+
+            // Kadena Mainnet chains
+            Kadena20 | Kadena21 | Kadena22 | Kadena23 | Kadena24 => false,
+
+            // Kadena testnets chains
+            KadenaTestnet20 | KadenaTestnet21 | KadenaTestnet22 | KadenaTestnet23
+            | KadenaTestnet24 | KadenaEvmTestnet20 | KadenaEvmTestnet21 | KadenaEvmTestnet22
+            | KadenaEvmTestnet23 | KadenaEvmTestnet24 | KadenaEvmTestnet25 | KadenaEvmTestnet26
+            | KadenaEvmTestnet27 | KadenaEvmTestnet28 | KadenaEvmTestnet29 | KadenaEvmTestnet30
+            | KadenaEvmTestnet31 | KadenaEvmTestnet32 | KadenaEvmTestnet33 | KadenaEvmTestnet34
+            | KadenaEvmTestnet35 | KadenaEvmTestnet36 | KadenaEvmTestnet37 | KadenaEvmTestnet38
+            | KadenaEvmTestnet39 => true,
         }
     }
 
@@ -1270,6 +1446,16 @@ impl NamedChain {
 
             LensTestnet => "GRASS",
             Lens => "GHO",
+
+            Kadena20 | Kadena21 | Kadena22 | Kadena23 | Kadena24 | KadenaTestnet20
+            | KadenaTestnet21 | KadenaTestnet22 | KadenaTestnet23 | KadenaTestnet24
+            | KadenaEvmTestnet20 | KadenaEvmTestnet21 | KadenaEvmTestnet22 | KadenaEvmTestnet23
+            | KadenaEvmTestnet24 | KadenaEvmTestnet25 | KadenaEvmTestnet26 | KadenaEvmTestnet27
+            | KadenaEvmTestnet28 | KadenaEvmTestnet29 | KadenaEvmTestnet30 | KadenaEvmTestnet31
+            | KadenaEvmTestnet32 | KadenaEvmTestnet33 | KadenaEvmTestnet34 | KadenaEvmTestnet35
+            | KadenaEvmTestnet36 | KadenaEvmTestnet37 | KadenaEvmTestnet38 | KadenaEvmTestnet39 => {
+                "KDA"
+            }
 
             _ => return None,
         })
@@ -1680,6 +1866,22 @@ impl NamedChain {
                 "https://block-explorer-api.staging.lens.zksync.dev",
                 "https://explorer.testnet.lens.xyz",
             ),
+
+            // TODO: add Kadena blockscout when live
+            Kadena20 | Kadena21 | Kadena22 | Kadena23 | Kadena24 => {
+                return None;
+            }
+            KadenaTestnet20 | KadenaTestnet21 | KadenaTestnet22 | KadenaTestnet23
+            | KadenaTestnet24 => {
+                return None;
+            }
+            KadenaEvmTestnet20 | KadenaEvmTestnet21 | KadenaEvmTestnet22 | KadenaEvmTestnet23
+            | KadenaEvmTestnet24 | KadenaEvmTestnet25 | KadenaEvmTestnet26 | KadenaEvmTestnet27
+            | KadenaEvmTestnet28 | KadenaEvmTestnet29 | KadenaEvmTestnet30 | KadenaEvmTestnet31
+            | KadenaEvmTestnet32 | KadenaEvmTestnet33 | KadenaEvmTestnet34 | KadenaEvmTestnet35
+            | KadenaEvmTestnet36 | KadenaEvmTestnet37 | KadenaEvmTestnet38 | KadenaEvmTestnet39 => {
+                return None;
+            }
         })
     }
 
@@ -1832,6 +2034,18 @@ impl NamedChain {
             | Lens
             | LensTestnet
             | Sei => return None,
+
+            // TODO add when available for Chainweb chains
+            Kadena20 | Kadena21 | Kadena22 | Kadena23 | Kadena24 => return None,
+            KadenaTestnet20 | KadenaTestnet21 | KadenaTestnet22 | KadenaTestnet23
+            | KadenaTestnet24 => return None,
+            KadenaEvmTestnet20 | KadenaEvmTestnet21 | KadenaEvmTestnet22 | KadenaEvmTestnet23
+            | KadenaEvmTestnet24 | KadenaEvmTestnet25 | KadenaEvmTestnet26 | KadenaEvmTestnet27
+            | KadenaEvmTestnet28 | KadenaEvmTestnet29 | KadenaEvmTestnet30 | KadenaEvmTestnet31
+            | KadenaEvmTestnet32 | KadenaEvmTestnet33 | KadenaEvmTestnet34 | KadenaEvmTestnet35
+            | KadenaEvmTestnet36 | KadenaEvmTestnet37 | KadenaEvmTestnet38 | KadenaEvmTestnet39 => {
+                return None
+            }
         };
 
         Some(api_key_name)
@@ -2042,6 +2256,36 @@ mod tests {
             (SophonTestnet, &["sophon-testnet"]),
             (Lens, &["lens"]),
             (LensTestnet, &["lens-testnet"]),
+            // (Kadena20, &["kadena-20"]),
+            // (Kadena21, &["kadena-21"]),
+            // (Kadena22, &["kadena-22"]),
+            // (Kadena23, &["kadena-23"]),
+            // (Kadena24, &["kadena-24"]),
+            // (KadenaTestnet20, &["kadena-testnet-20"]),
+            // (KadenaTestnet21, &["kadena-testnet-21"]),
+            // (KadenaTestnet22, &["kadena-testnet-22"]),
+            // (KadenaTestnet23, &["kadena-testnet-23"]),
+            // (KadenaTestnet24, &["kadena-testnet-24"]),
+            // (KadenaEvmTestnet20, &["kadena-evm-testnet-20"]),
+            // (KadenaEvmTestnet21, &["kadena-evm-testnet-21"]),
+            // (KadenaEvmTestnet22, &["kadena-evm-testnet-22"]),
+            // (KadenaEvmTestnet23, &["kadena-evm-testnet-23"]),
+            // (KadenaEvmTestnet24, &["kadena-evm-testnet-24"]),
+            // (KadenaEvmTestnet25, &["kadena-evm-testnet-25"]),
+            // (KadenaEvmTestnet26, &["kadena-evm-testnet-26"]),
+            // (KadenaEvmTestnet27, &["kadena-evm-testnet-27"]),
+            // (KadenaEvmTestnet28, &["kadena-evm-testnet-28"]),
+            // (KadenaEvmTestnet29, &["kadena-evm-testnet-29"]),
+            // (KadenaEvmTestnet30, &["kadena-evm-testnet-30"]),
+            // (KadenaEvmTestnet31, &["kadena-evm-testnet-31"]),
+            // (KadenaEvmTestnet32, &["kadena-evm-testnet-32"]),
+            // (KadenaEvmTestnet33, &["kadena-evm-testnet-33"]),
+            // (KadenaEvmTestnet34, &["kadena-evm-testnet-34"]),
+            // (KadenaEvmTestnet35, &["kadena-evm-testnet-35"]),
+            // (KadenaEvmTestnet36, &["kadena-evm-testnet-36"]),
+            // (KadenaEvmTestnet37, &["kadena-evm-testnet-37"]),
+            // (KadenaEvmTestnet38, &["kadena-evm-testnet-38"]),
+            // (KadenaEvmTestnet39, &["kadena-evm-testnet-39"]),
         ];
 
         for &(chain, aliases) in ALIASES {
